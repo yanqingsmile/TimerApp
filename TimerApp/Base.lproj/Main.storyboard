@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="181" translatesAutoresizingMaskIntoConstraints="NO" id="zRR-7O-lyW">
+                                <rect key="frame" x="20" y="380" width="374" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGy-NA-vOi">
+                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FMp-iZ-k41"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoA-NP-S8a">
+                                        <rect key="frame" x="277.5" y="0.0" width="96.5" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="StartResumeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dnJ-DV-B5q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMg-vK-i9d">
+                                <rect key="frame" x="40" y="546" width="334" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Iw-Lr-Ovt">
+                                <rect key="frame" x="171.5" y="194" width="71" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uMg-vK-i9d" secondAttribute="bottom" constant="100" id="4uq-0S-qiz"/>
+                            <constraint firstItem="zRR-7O-lyW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BGo-pH-amo"/>
+                            <constraint firstItem="4Iw-Lr-Ovt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="MdH-VG-kDZ"/>
+                            <constraint firstItem="4Iw-Lr-Ovt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TuS-09-44j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zRR-7O-lyW" secondAttribute="trailing" constant="20" id="Uex-DM-1ag"/>
+                            <constraint firstItem="zRR-7O-lyW" firstAttribute="top" secondItem="4Iw-Lr-Ovt" secondAttribute="bottom" constant="150" id="eEe-cj-fd0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uMg-vK-i9d" secondAttribute="trailing" constant="40" id="qta-Rr-9uo"/>
+                            <constraint firstItem="uMg-vK-i9d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="uL9-gO-J5O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="StartResumeButton" destination="OoA-NP-S8a" id="TfT-tc-vo3"/>
+                        <outlet property="cancelButton" destination="QGy-NA-vOi" id="ziv-cP-Dix"/>
+                        <outlet property="timeLabel" destination="4Iw-Lr-Ovt" id="3ft-8k-gkB"/>
+                        <outlet property="timePickerView" destination="uMg-vK-i9d" id="LOD-eo-caq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
